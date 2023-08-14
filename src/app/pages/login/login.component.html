@@ -2,11 +2,11 @@
 <div class="login-container">
   <h2>{{tittle}}</h2>
   <form>
-    <label for= "instert email"> Email </label>
-    <imput type= "email" id= "user_email" [(ngModel)]= "user.email" name = "user_email" required> 
+    <label class="LoginEmail" for= "instert email"> Email </label><br>
+    <imput type= "email" id= "user_email" [(ngModel)]= "user.email" name = "user_email" required><br> 
 
-    <label for="user_password">Password:</label>
-    <input type="password" id="user_password" [(ngModel)]="user.password" name="user_Password" required>
+    <label class="LoginPassword" for="user_password">Password:</label><br>
+    <input type="password" id="user_password" [(ngModel)]="user.password" name="user_Password" required><br>
     <button (click)="login()">Login</button>
   </form>
   
