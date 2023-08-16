@@ -12,15 +12,30 @@ import { Home } from 'src/app/models/item'
 export class HomeComponent {
   title = 'home';
 
-  items = {
+  dataFromReceiver: {
+    user: string,
+    description: string,
+    image: string
+  } | null = null;
+  allItems = {
     reactions: 'false',
     comments: 'Es un excelente bootcamp',
-  }
+  };
+
   receiveData(data: {
-    user: String,
-    description: String,
-    image: String
+    user: string,
+    description: string,
+    image: string
   }) {
-    console.log('Data received:', data);
+    this.dataFromReceiver = data;
+    console.log('Data received:', this.dataFromReceiver);
+  }
+
+  get items() {
+    const combinedData = {
+      ...this.dataFromReceiver,
+      ...this.allItems
+    };
+    return combinedData;
   }
 }
