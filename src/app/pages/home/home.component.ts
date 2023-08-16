@@ -17,6 +17,7 @@ export class HomeComponent {
     description: string,
     image: string
   } | null = null;
+
   allItems = {
     reactions: 'false',
     comments: 'Es un excelente bootcamp',

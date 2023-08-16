@@ -17,3 +17,10 @@ export interface Home extends User {
   _id: number;
 }
 
+export interface profile extends User {
+  _id: number;
+  user: String;
+  date_create: Date;
+  description: String;
+  image: String;
+}
