@@ -6,3 +6,14 @@ export interface User {
     password: string;
     userImg:string;
 }
+
+export interface Home extends User {
+  user: String;
+  date_create: Date;
+  description: String;
+  image: String;
+  reactions: String;
+  comments: String;
+  _id: number;
+}
+
