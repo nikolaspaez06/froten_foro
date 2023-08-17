@@ -90,6 +90,20 @@ button{
     font-size: 14px;
     border:none;
 }
+.click-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #191818;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.8s ease;
+  }
+  
+  .click-button:active {
+    background-color: #806cf1;
+  }
 
 
 
