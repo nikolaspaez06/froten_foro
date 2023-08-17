@@ -32,7 +32,8 @@ form{
     border-left: none;
     border-right: none;
     border-bottom: solid 2px var(--color-text, #333333);
-    color:#FFF;
+    color:transparent;
+    outline: none;
 }
 
 label{
@@ -43,6 +44,7 @@ label{
     font-weight: 100;
     line-height: normal;
     margin-bottom: 0px;
+    
 }
 .containerAlin{
     display: flex;
@@ -104,7 +106,9 @@ button{
   .click-button:active {
     background-color: #806cf1;
   }
-
+.containerAlin input{
+    background: transparent;
+}
 
 
 @media (max-width: 480px) {
