@@ -83,7 +83,23 @@ button{
   font-family: Inter;
   font-size: 14px;
   border:none;
-}@media (max-width: 480px) {
+}
+.click-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #191818;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.8s ease;
+}
+
+.click-button:active {
+  background-color: #806cf1;
+  
+}
+@media (max-width: 480px) {
   .login-container {
       filter: none; /* Eliminar el filtro de desenfoque */
   }
