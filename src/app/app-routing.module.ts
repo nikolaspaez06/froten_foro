@@ -10,7 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 const routes: Routes = [
   {path:'profile',component:ProfileComponent},
   {path: 'register', component: RegisterComponent },
-  {path:'login',component:LoginComponent},
+  {path:'',component:LoginComponent},
   {path:'home',component:HomeComponent}
 ];
 
