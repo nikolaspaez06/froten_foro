@@ -7,9 +7,9 @@
           <label for="name">Your Name</label><br>
           <input type="text" id="name" formControlName="name" required><br>
           <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['required']"
-         class="alert alert-danger">this field is required.</div>
+            class="alert alert-danger">this field is required.</div>
           <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['minlength']"
-         class="alert alert-danger">Name must  be longer than {{contactForm.get('name')?.errors?.['minlength']?.requiredLength}} characters.</div>
+            class="alert alert-danger">Name must  be longer than {{contactForm.get('name')?.errors?.['minlength']?.requiredLength}} characters.</div>
           <br>
           <label for="email">Email</label><br>
           <input type="email" id="email" formControlName="email" required><br>

@@ -26,11 +26,11 @@ export class RegisterComponent {
   contactForm!:FormGroup;
 
   constructor(private readonly fb: FormBuilder) {}
-  
+
   ngOnInit(): void {
     this.contactForm = this.initFrom();
   }
-  onSubmit(): void { 
+  onSubmit(): void {
     console.log('form ->',this.contactForm.value);
   }
 
@@ -40,5 +40,5 @@ export class RegisterComponent {
       email: ['',[Validators.required]],
       password: ['',[Validators.required,Validators.minLength(8)]],
     })
- }
+}
 }
