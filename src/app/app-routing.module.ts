@@ -5,11 +5,6 @@ import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
 
 
-const routes: Routes = [
-  // Otras rutas...
-  { path: 'register', component: RegisterComponent },
-  { path:'login',component:LoginComponent},
-
 
 
 const routes: Routes = [
