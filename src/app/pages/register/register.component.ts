@@ -11,17 +11,17 @@ import { FormBuilder,FormGroup,Validators } from '@angular/forms';
 })
 
 export class RegisterComponent {
-  tittle = "Register";
-  public allitem: any = []
+  // tittle = "Register";
+  // public allitem: any = []
 
-  addItem(your_name: string, email:string, password: string){
-    const newTask = {
-      userName: your_name,
-      email: email,
-      password:password
+  // addItem(your_name: string, email:string, password: string){
+  //   const newTask = {
+  //     userName: your_name,
+  //     email: email,
+  //     password:password
 
-    }
-  }
+  //   }
+  // }
 
   contactForm!:FormGroup;
 
