@@ -32,7 +32,7 @@ form{
     border-left: none;
     border-right: none;
     border-bottom: solid 2px var(--color-text, #333333);
-    color:transparent;
+    color:#FFF;
     outline: none;
 }
 
@@ -44,7 +44,7 @@ label{
     font-weight: 100;
     line-height: normal;
     margin-bottom: 0px;
-    
+
 }
 .containerAlin{
     display: flex;
@@ -102,7 +102,7 @@ button{
     cursor: pointer;
     transition: background-color 0.8s ease;
   }
-  
+
   .click-button:active {
     background-color: #806cf1;
   }
