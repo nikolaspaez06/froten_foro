@@ -17,6 +17,15 @@
     z-index: -2;
 }
 
+.background-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 800%;
+  height: 200%;
+  z-index: -1;
+  pointer-events: none;
+}
 
 
 form{
@@ -49,7 +58,7 @@ label{
 .containerAlin{
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     width: 100%;
     height: auto;
 }
