@@ -1,19 +1,30 @@
 
-.login-container{
+.login-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  object-fit: cover;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  position: fixed;
+  overflow: hidden;
   background-image: url("./img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(0.2px) hue-rotate(-10deg); /* Ajustar el valor de hue-rotate */
+  filter: blur(0.2px) hue-rotate(-10deg);
   z-index: -2;
 }
+
+.background-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 800%;
+  height: 200%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
 
 form{
   display: flex;
@@ -44,7 +55,7 @@ label{
 .container{
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   width: 100%;
   height: auto;
 }
@@ -97,7 +108,7 @@ button{
 
 .click-button:active {
   background-color: #806cf1;
-  
+
 }
 @media (max-width: 480px) {
   .login-container {
