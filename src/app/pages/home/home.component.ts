@@ -13,10 +13,12 @@ import { Home } from 'src/app/models/item'
 export class HomeComponent {
   constructor(private ForoService: ForoService){}
 
-  title = 'homeforo';
+  title = 'home';
   public listpublications: any = []
-  ngOnInit():void{
 
+
+  ngOnInit():void{
+    this.loadData()
   }
 
   public loadData(){
@@ -27,39 +29,3 @@ export class HomeComponent {
     })
   }
 }
-
-
-  // dataFromReceiver: {
-  //   user: string,
-  //   description: string,
-  //   image: string
-   //| null = null;
-
-//   allItems = {
-//     reactions: 'false',
-//     comments: 'Es un excelente bootcamp',
-//   };
-
-//   receiveData(data: {
-//     user: string,
-//     description: string,
-//     image: string
-//   }) {
-//     this.dataFromReceiver = data;
-//     console.log('Data received:', this.dataFromReceiver);
-//   }
-
-//   get items() {
-//     const combinedData = {
-//       ...this.dataFromReceiver,
-//       ...this.allItems
-//     };
-//     return combinedData;
-//   }
-// }
-
-
-// dataFromReceiver: {
-//   user: string,
-//   description: string,
-//   image: string
