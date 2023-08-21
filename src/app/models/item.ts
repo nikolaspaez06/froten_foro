@@ -1,6 +1,6 @@
 //importan datos backend
 export interface User {
-    _id: number;
+    _id: string;
     userName: string;
     email: string;
     password: string;
@@ -8,19 +8,17 @@ export interface User {
 }
 
 export interface Home extends User {
-  user: String;
+  user: string;
   date_create: Date;
-  description: String;
-  image: String;
-  reactions: String;
-  comments: String;
-  _id: number;
+  description: string;
+  image: string;
+  _id: string;
 }
 
 export interface profile extends User {
-  _id: number;
-  user: String;
+  _id: string;
+  user: string;
   date_create: Date;
-  description: String;
-  image: String;
+  description: string;
+  image: string;
 }
