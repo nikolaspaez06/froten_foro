@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-image: url("./img/background.jpg");
+  background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(0.2px) hue-rotate(-10deg);

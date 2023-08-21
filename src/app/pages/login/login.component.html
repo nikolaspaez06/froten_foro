@@ -20,24 +20,27 @@
   </div>
 
   <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
-    <h1 class="title">POOFO </h1>
+    <h1 class="title">POOFO</h1>
     <div class="container">
-      <h2 class="sub-re">log into <br>your account</h2>
-      <label class="loginEmail" for="insert email">Email</label><br>
-      <input type="email" id="user_email" name="user_email" required><br>
-      <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required']"
-      class="alert alert-danger">this field is required.</div>
+      <h2 class="sub-re">Log into<br>your account</h2>
+      <label class="loginEmail" for="email">Email</label><br>
+      <input type="email" id="email" name="email" formControlName="email" autocomplete="email" required><br>
 
-      <label class="loginPassword" for="user_password">Password</label><br>
-      <input type="password" id="user_password" name="user_password" required><br>
+
+      <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required']"
+        class="alert alert-danger">This field is required.</div>
+
+      <label class="loginPassword" for="password">Password</label><br>
+      <input type="password" id="password" name="password" formControlName="password" autocomplete="current-password" required><br>
+
+
       <div *ngIf="contactForm.get('password')?.touched && contactForm.get('password')?.errors?.['required']"
-      class="alert alert-danger">this field is required.</div>
+        class="alert alert-danger">This field is required.</div>
       <div *ngIf="contactForm.get('password')?.touched && contactForm.get('password')?.errors?.['minlength']"
-      class="alert alert-danger">Password must  be longer than {{contactForm.get('password')?.errors?.['minlength']?.requiredLength}} characters.
-      </div>
-      <button class="click-button" type="submit">log in</button>
-      <button class="click-button" type="submit">Register</button>
+        class="alert alert-danger">Password must be longer than {{contactForm.get('password')?.errors?.['minlength']?.requiredLength}} characters.</div>
+
+      <button class="click-button" type="submit">Log in</button>
+      <button class="click-button" type="button">Register</button>
     </div>
   </form>
 
-</div>
