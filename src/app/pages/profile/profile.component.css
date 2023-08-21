@@ -1,141 +1,107 @@
 body {
+
   font-family: Arial, sans-serif;
   background: #121212;
   background-size: cover;
-}
-.profile {
-  max-width:max-content;
-  background-color: transparent;
 
 }
 
-.tiltle{
-  color: white;
-  margin-bottom: 150px;
-  margin-left: 60px;
-  font-size: 40px;
-}
-
-.container-button{
-  display: block;
-  background: transparent;
-  color: white;
-  outline: none;
-  border: none;
-  margin-bottom: 80px;
-  margin-left: 75px;
-  width: 40px;
-  height: 20px;
-  font-size: 24px;
-}
-.Setting-button{
-  display: block;
-  background: transparent;
-  color: white;
-  outline: none;
-  border: none;
-  margin-bottom: 100px;
-  margin-left: 75px;
-  margin-top: 150px;
-  width: 40px;
-  height: 20px;
-  font-size: 24px;
-}
 .vertical-line {
-border-left: 1px solid #ccc; /* Cambia el color y el grosor según tus preferencias */
-height: 650px; /* Ajusta la altura de la línea según tus necesidades */
-margin-left: 250px;
-margin-top: -700px;
+  border-left: 1px solid #ccc;
+  height: 600px;
+  margin-left: 250px;
+  margin-top: -270px;
+ }
 
-}
 .container-profile{
-  margin-left: 400px;
-  margin-top: -700px;
-
-}
-.tiltle-2{
-color: white;
-margin-left: 250px;
-margin-top: 80px ;
-
+  margin-left: 390px;
+  margin-top: -580px;
 }
 .imagen{
-width: 180px;
-height: 180px;
-border-radius: 130px;
-margin-left: 10px;
-margin-top: -50px;
+  width: 180px;
+  height: 180px;
+  border-radius: 400px;
+  margin-top: -60px;
 }
 
+.tiltle-2{
+  color: rgb(255, 255, 255);
+  margin-left: 250px;
+  margin-top: 80px ;
+}
+
+.container-edit{
+  margin-left: 70px;
+  margin-top:-160px;
+}
 .Edit{
-width: 140px;
-height: 40px;
-left: 1081px;
-border-radius: 5px;
-border: 1px;
-background: linear-gradient(0deg, #1C1C1C, #1C1C1C),
-linear-gradient(0deg, #FFFFFF, #FFFFFF);
-color: white;
-margin-left: 500px;
+  width: 140px;
+  height: 40px;
+  left: 1081px;
+  border-radius: 5px;
+  border: 1px;
+  background: linear-gradient(0deg, #1C1C1C, #1C1C1C),
+  linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  color: white;
+  margin-left: 500px;
 
+  }
+
+  input{
+    width: 523px;
+    height: 44px;
+    border-radius: 30px;
+    border: 1px solid #FFFFFF;
+    background:#191818;
+    color: white;
+    margin-left: 200px;
+    margin-top: 50px;
+  }
+
+  .insert-img{
+    width: 140px;
+    height: 40px;
+    top: 300px;
+    left: 797px;
+    border-radius: 5px;
+    border: 1px;
+    background: linear-gradient(0deg, #1C1C1C, #1C1C1C),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    color: white;
+    margin-left: 220px;
+    margin-top: -80px;
+    }
+    .new-post{
+    width: 140px;
+    height: 40px;
+    top: 300px;
+    left: 1093px;
+    border-radius: 5px;
+    border: 1px;
+    background: linear-gradient(0deg, #1C1C1C, #1C1C1C),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    color: white;
+    margin-left: 210px;
+    margin-top: 20px;
+
+    }
+
+    .linea-horizontal {
+      border-top: 1px solid #ccc;
+      width: 65%;
+      margin:30px;
+      margin-left: 370px;
+      margin-top: 20px;
+
+    }
+.container-img
+{
+
+  margin-left: 350px;
+  margin-top: 20px;
 }
-
-input{
-width: 523px;
-height: 44px;
-border-radius: 30px;
-border: 1px solid #FFFFFF;
-background:#191818;
-color: white;
-margin-left: 300px;
-margin-top: -100px;
-
-}
-.insert-img{
-width: 140px;
-height: 40px;
-top: 300px;
-left: 797px;
-border-radius: 5px;
-border: 1px;
-background: linear-gradient(0deg, #1C1C1C, #1C1C1C),
-linear-gradient(0deg, #FFFFFF, #FFFFFF);
-color: white;
-margin-left: 300px;
-margin-top: -80px;
-}
-.new-post{
-width: 140px;
-height: 40px;
-top: 300px;
-left: 1093px;
-border-radius: 5px;
-border: 1px;
-background: linear-gradient(0deg, #1C1C1C, #1C1C1C),
-linear-gradient(0deg, #FFFFFF, #FFFFFF);
-color: white;
-margin-left: 100px;
-
-}
-.linea-horizontal {
-  border-top: 1px solid #ccc; /* Cambia el color y el grosor según tus preferencias */
-  width: 65%; /* Ancho de la línea horizontal */
-  margin:30px;
-  margin-left: 370px;
-  margin-top: -5px;
-
-}
-
-
-.container-img{
-  margin-left: 340px;
-}
-.npost{
-
-width: 267px;
-height: 324px;
-top: 601px;
-left: 359px;
-margin-left: 30px;
-margin-top: -15px;
+.npost
+{
+  display: inline;
+  margin-left: 20px;
 }
