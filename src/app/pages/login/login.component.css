@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-.login-container{
+.login-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,23 +27,54 @@
 }
 
 
-form{
+form {
   display: flex;
+  flex-flow: column nowrap;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 30%;
+  gap: 8vh;
+  width: auto;
+  margin: 0;
 }
-.container input{
+
+form h1 {
+  flex-shrink: 0;
+  color: #FFF;
+  font-family: Inter;
+  font-size: xx-large;
+  font-weight: 900;
+  margin-bottom: 40%;
+}
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+}
+
+form h2 {
+  flex-shrink: 0;
+  color: #FFF;
+  font-family: Inter;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  margin-bottom: 15%;
+}
+
+.container input {
   background: transparent;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: solid 2px var(--color-text, #333333);
-  color:#FFF;
+  color: #FFF;
   outline: none;
 }
-label{
+
+label {
   color: #FFF;
   font-family: Inter;
   font-size: 13px;
@@ -53,56 +84,40 @@ label{
   margin-bottom: 0px;
   outline: none;
 }
-.container{
+
+.buttons {
+  margin-top: 0%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 100%;
-  height: auto;
-}
-form h1{
-  width: 148px;
-  height: 56px;
-  flex-shrink: 0;
-  color: #FFF;
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 200;
-  line-height: normal;
-
+  flex-flow: column wrap;
+  gap: 5vh;
 }
 
-form h2{
-
-  height: 50px;
-  flex-shrink: 0;
-  color: #FFF;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 100;
-  line-height: normal;
-}
-button{
-  border-radius: 5px;
-  margin-top: 10px;
+button {
+  border-radius: 10px;
+  /* margin-top: 10px;
   width: 275.929px;
-  height: 35.286px;
+  height: 35.286px; */
   flex-shrink: 0;
   background-color: #191818;
   color: #FFF;
   font-family: Inter;
   font-size: 14px;
-  border:none;
+  border: none;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  padding: 20px 150px 20px 150px;
 }
+
+button:hover {
+  background-color: #333333;
+}
+
 .click-button {
-  padding: 10px 20px;
   font-size: 16px;
   background-color: #191818;
   color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.8s ease;
 }
@@ -111,28 +126,35 @@ button{
   background-color: #806cf1;
 
 }
+
 @media (max-width: 480px) {
   .login-container {
-      filter: none; /* Eliminar el filtro de desenfoque */
+    filter: none;
+    /* Eliminar el filtro de desenfoque */
   }
 
   form {
-      width: 80%; /* Reducir el ancho del formulario */
+    width: 80%;
+    /* Reducir el ancho del formulario */
   }
 
   label {
-      font-size: 12px; /* Reducir el tamaño de fuente de las etiquetas */
+    font-size: 12px;
+    /* Reducir el tamaño de fuente de las etiquetas */
   }
 
   form h1 {
-      font-size: 18px; /* Reducir el tamaño de fuente del título */
+    font-size: 18px;
+    /* Reducir el tamaño de fuente del título */
   }
 
   form h2 {
-      font-size: 12px; /* Reducir el tamaño de fuente del subtítulo */
+    font-size: 12px;
+    /* Reducir el tamaño de fuente del subtítulo */
   }
 
   button {
-      width: 100%; /* Ajustar el ancho del botón al 100% */
+    width: 100%;
+    /* Ajustar el ancho del botón al 100% */
   }
 }
