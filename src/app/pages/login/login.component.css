@@ -135,11 +135,20 @@ button:hover {
   font-size: 16px;
 }
 
-@media (max-width: 1200px) {
-  .login-container {
+/* Media Queries */
+@media (max-width: 1600px) {
+
+  /* .login-container {
     filter: none;
+  } */
+
+  section {
+    width: 50%;
   }
 
+}
+
+@media (max-width: 1200px) {
   section {
     width: 60%;
   }
