@@ -1,6 +1,194 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: 0;
+  padding: 0; */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(0.2px) hue-rotate(-10deg);
+  z-index: -2;
+}
 
+.background-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 800%;
+  height: 200%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+section {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70%;
+  width: 30%;
+}
+
+.title {
+  /* flex-shrink: 0; */
+  /* font-size: xx-large; */
+  font-family: Inter;
+  color: aliceblue;
+  width: auto;
+  text-align: center;
+  font-weight: 800;
+  margin-top: -10%;
+  /* margin: -7% 0% 20% 0%; */
+}
+
+form {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 20px;
+  width: 80%;
+  height: 90%;
+}
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  margin: 0;
+}
+
+form h2 {
+  font-family: Inter;
+  color: white;
+  font-size: large;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+label {
+  color: #FFF;
+  font-family: Inter;
+  font-size: large;
+}
+
+.container input {
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  color: #FFF;
+  border-bottom: solid 2px var(--color-text, #333333);
+  /* outline: none; */
+  /* background-color: rgb(229, 255, 0); */
+}
+
+button {
+  align-items: center;
+  font-family: Inter;
+  font-size: large;
+  border: none;
+  background-color: #191818;
+  color: #FFF;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+  margin-top: 20%;
+}
+
+button:hover {
+  background-color: rgb(68, 65, 65);
+}
+
+.alert-danger {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  background-color: rgba(201, 18, 18, 0.719);
+  font-size: 12px;
+  padding: 5px 10px;
+  left: -15px;
+  top: -60px;
+  border-radius: 4px;
+}
+
+.alert-danger::before {
+  content: "\26A0";
+  position: absolute;
+  left: -15px;
+  font-size: 16px;
+}
+
+/* Media Queries */
+@media (max-width: 1600px) {
+
+  /* .login-container {
+    filter: none;
+  } */
+
+  section {
+    width: 50%;
+  }
+
+  button {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 1200px) {
+  section {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    width: 90%;
+  }
+
+  .title {
+    margin-top: -20%;
+  }
+
+  form {
+    gap: 0px;
+    padding: 0px;
+    width: 85%;
+    height: 80%;
+  }
+
+  form h2 {
+    margin-bottom: 50px;
+  }
+
+  button {
+    margin-top: 30px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 320px) {
+  section {
+    width: 100%;
+  }
+}
+
+
+/*
 .login {
   display: flex;
   align-items: center;
@@ -25,10 +213,9 @@
   height: 200%;
   z-index: -1;
   pointer-events: none;
-}
+} */
 
-
-form {
+/* form {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -120,37 +307,37 @@ button:hover {
 
 .containerAlin input {
   background: transparent;
-}
+} */
 
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .login {
     filter: none;
-    /* Eliminar el filtro de desenfoque */
+    Eliminar el filtro de desenfoque
   }
 
   form {
     width: 80%;
-    /* Reducir el ancho del formulario */
+    Reducir el ancho del formulario
   }
 
   label {
     font-size: 12px;
-    /* Reducir el tamaño de fuente de las etiquetas */
+    Reducir el tamaño de fuente de las etiquetas
   }
 
   form h1 {
     font-size: 18px;
-    /* Reducir el tamaño de fuente del título */
+    Reducir el tamaño de fuente del título
   }
 
   form h2 {
     font-size: 12px;
-    /* Reducir el tamaño de fuente del subtítulo */
+    Reducir el tamaño de fuente del subtítulo
   }
 
   button {
     width: 100%;
-    /* Ajustar el ancho del botón al 100% */
+    Ajustar el ancho del botón al 100%
   }
-}
+} */
