@@ -1,5 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+
+import { FormBuilder,FormGroup,Validators } from '@angular/forms';
+import { AuthService } from 'src/app/core/service/auth.service';
+import { Router } from '@angular/router';
+
+
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ForoService } from 'src/app/core/service/foro.service';
 
@@ -11,20 +17,29 @@ import { ForoService } from 'src/app/core/service/foro.service';
 })
 
 export class RegisterComponent {
-  // tittle = "Register";
-  // public allitem: any = []
 
-  // addItem(your_name: string, email:string, password: string){
-  //   const newTask = {
-  //     userName: your_name,
-  //     email: email,
-  //     password:password
-
-  //   }
-  // }
+  constructor(private authService: AuthService ,
+    private readonly fb: FormBuilder,
+    private router:Router){}
 
   contactForm!: FormGroup;
 
+
+  ngOnInit(): void {
+    this.contactForm = this.initFrom();
+    this.signUp()
+  }
+
+  signUp(){
+    this.authService.signUp(this.contactForm.value)
+    .subscribe( res =>{
+      console.log(res)
+      localStorage.setItem('token', res.token)
+      this.router.navigate(['/profile'])
+    },
+    err => console.log(err)
+    )
+=======
   constructor(private foroService: ForoService, private readonly fb: FormBuilder) { }
 
   ngOnInit(): void {
@@ -33,7 +48,10 @@ export class RegisterComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]]
     });
+
   }
+
+
   onSubmit(): void {
     if (this.contactForm.valid) {
       const newUser = {
@@ -59,11 +77,19 @@ export class RegisterComponent {
 
 
   initFrom(): FormGroup {
+
+    return this.fb.group ({
+      userName: ['',[Validators.required,Validators.minLength(3)]],
+      email: ['',[Validators.required]],
+      password: ['',[Validators.required,Validators.minLength(8)]],
+
     return this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required]],
       password: ['', [Validators.required, Validators.minLength(8)]],
 
+
     })
   }
 }
+

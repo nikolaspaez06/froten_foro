@@ -34,5 +34,7 @@ export class ForoService {
 
     return this.http.post<any>('http://localhost:3000/poofo/create', user, httpOptions);
   }
+
+
 }
 

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup,Validators } from '@angular/forms';
+import { AuthService } from 'src/app/core/service/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,26 +12,29 @@ import { FormBuilder,FormGroup,Validators } from '@angular/forms';
 
 export class LoginComponent {
 
-  tittle = "Register";
-  public allitem: any = []
-
-  addItem(email:string, password: string){
-    const newTask = {
-     
-      email: email,
-      password:password
-
-    }
-  }
 
   contactForm!:FormGroup;
 
-  constructor(private readonly fb: FormBuilder) {}
-  
+  constructor(private authService: AuthService,
+    private router: Router,
+    private readonly fb: FormBuilder) {}
+
   ngOnInit(): void {
     this.contactForm = this.initFrom();
   }
-  onSubmit(): void { 
+
+  signIn(){
+    this.authService.signIn(this.contactForm.value)
+    .subscribe(res =>{
+      console.log(res)
+      localStorage.setItem('token', res.token)
+      this.router.navigate(['/profile'])
+    },
+    err => console.log(err)
+    )
+  }
+
+  onSubmit(): void {
     console.log('form ->',this.contactForm.value);
   }
 
@@ -41,4 +46,3 @@ export class LoginComponent {
  }
 }
 
-//simulacion bakcend
