@@ -6,6 +6,8 @@ import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from '../core/core.module';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -21,8 +23,9 @@ import { CoreModule } from '../core/core.module';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    CoreModule
-
+    CoreModule,
+    HttpClientModule,
+    RouterModule
   ]
 })
 export class PagesModule { }
