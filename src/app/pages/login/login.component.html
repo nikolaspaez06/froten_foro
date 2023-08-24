@@ -20,7 +20,7 @@
       </defs>
     </svg>
   </div>
-
+<section>
   <form (ngSubmit)="signIn()" [formGroup]="contactForm">
     <div class="title">
       <h1 class="title">POOFO</h1>
@@ -44,36 +44,5 @@
       <button routerLink="/register" class="click-button" type="button">Register</button>
     </div>
   </form>
-
+</section>
 </div>
-
-  <section>
-    <div class="title">
-      <h1 class="title">POOFO</h1>
-    </div>
-    <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
-      <div class="container">
-        <h2 class="sub-re">Log into<br>your account</h2>
-        <label class="loginEmail" for="email">Email</label><br>
-        <input type="email" id="email" name="email" formControlName="email" autocomplete="email" required><br>
-        <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required']"
-          class="alert-danger">This field is required.</div>
-        <label class="loginPassword" for="password">Password</label><br>
-        <input type="password" id="password" name="password" formControlName="password" autocomplete="current-password"
-          required><br>
-        <div *ngIf="contactForm.get('password')?.touched && contactForm.get('password')?.errors?.['required']"
-          class="alert-danger">This field is required.</div>
-        <div *ngIf="contactForm.get('password')?.touched && contactForm.get('password')?.errors?.['minlength']"
-          class="alert-danger">Password must be longer than
-          {{contactForm.get('password')?.errors?.['minlength']?.requiredLength}} characters.</div>
-      </div>
-
-      <div class="buttons">
-        <button class="click-button" type="submit">Log in</button>
-        <button class="click-button" type="button">Register</button>
-      </div>
-    </form>
-  </section>
-
-</div>
-
