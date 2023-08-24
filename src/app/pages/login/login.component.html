@@ -31,7 +31,7 @@
         <label class="loginEmail" for="email">Email</label><br>
         <input type="email" id="email" name="email" formControlName="email" autocomplete="email" required><br>
         <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required']"
-          class="alert-danger">This field is required.</div>
+          class="alert-danger">This field is required.</div><br>
         <label class="loginPassword" for="password">Password</label><br>
         <input type="password" id="password" name="password" formControlName="password" autocomplete="current-password"
           required><br>

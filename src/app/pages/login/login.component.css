@@ -126,6 +126,7 @@ button:hover {
   left: -15px;
   top: -60px;
   border-radius: 4px;
+  margin-bottom: -50px;
 }
 
 .alert-danger::before {
