@@ -18,4 +18,14 @@ export class AuthService {
   public signIn(user:any){
     return this.http.post<any>(this.URL + '/signin',user)
   }
+
+  loggedIn(){
+    const token = localStorage.getItem('token')
+    return token !== null
+    }
+
+  saveToken(token: string){
+    localStorage.setItem('token', token)
+  }
+
 }
