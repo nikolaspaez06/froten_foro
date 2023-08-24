@@ -21,9 +21,11 @@
     </svg>
   </div>
   <section>
-    <form (ngSubmit)="signUp()" [formGroup]="contactForm">
+    <div class="title">
       <h1 class="title">POOFO</h1>
-      <div class="containerAlin">
+    </div>
+    <form (ngSubmit)="signUp()" [formGroup]="contactForm">
+      <div class="container">
         <h2 class="sub-re">Create your <br>account</h2>
         <br>
         <label for="userName">Your Name</label><br>
