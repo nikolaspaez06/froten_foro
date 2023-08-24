@@ -43,6 +43,6 @@ export class LoginComponent {
       email: ['',[Validators.required]],
       password: ['',[Validators.required,Validators.minLength(8)]],
     })
- }
+  }
 }
 
