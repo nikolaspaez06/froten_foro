@@ -5,15 +5,16 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AsideComponent } from './core/aside/aside.component';
+import { authGuard } from 'src/guards/auth.guard';
 
 
 
 const routes: Routes = [
-  {path:'profile',component:ProfileComponent},
+  {path:'profile',component:ProfileComponent, canActivate:[authGuard]},
   {path: 'register', component: RegisterComponent },
   {path:'',component:LoginComponent},
-  {path:'home',component:HomeComponent},
-  {path: 'aside',component:AsideComponent}
+  {path:'home',component:HomeComponent, canActivate:[authGuard]},
+  {path: 'aside',component:AsideComponent, canActivate:[authGuard]}
 
 ];
 
