@@ -20,10 +20,12 @@
       </defs>
     </svg>
   </div>
-<section>
-  <form (ngSubmit)="signUp()" [formGroup]="contactForm">
-    <h1 class="title">POOFO</h1>
-    <div class="containerAlin">
+  <section>
+    <div class="title">
+      <h1 class="title">POOFO</h1>
+    </div>
+    <form (ngSubmit)="signUp()" [formGroup]="contactForm">
+      <div class="container">
         <h2 class="sub-re">Create your <br>account</h2>
         <br>
         <label for="userName">Your Name</label><br>
@@ -31,23 +33,24 @@
         <div *ngIf="contactForm.get('userName')?.touched && contactForm.get('userName')?.errors?.['required']"
           class="alert alert-danger">this field is required.</div>
         <div *ngIf="contactForm.get('userName')?.touched && contactForm.get('userName')?.errors?.['minlength']"
-          class="alert alert-danger">Name must  be longer than {{contactForm.get('userName')?.errors?.['minlength']?.requiredLength}} characters.</div>
+          class="alert alert-danger">Name must be longer than
+          {{contactForm.get('userName')?.errors?.['minlength']?.requiredLength}} characters.</div>
         <br>
         <label for="email">Email</label><br>
         <input type="email" id="email" formControlName="email" required><br>
         <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required']"
-    class="alert alert-danger">this field is required.</div>
+          class="alert-danger">this field is required.</div><br>
 
         <label for="password">Password</label><br>
         <input type="password" id="password" formControlName="password" required><br>
         <div *ngIf="contactForm.get('password')?.touched && contactForm.get('password')?.errors?.['required']"
-    class="alert alert-danger">this field is required.</div>
+          class="alert alert-danger">this field is required.</div>
         <div *ngIf="contactForm.get('password')?.touched && contactForm.get('password')?.errors?.['minlength']"
-    class="alert alert-danger">Password must  be longer than {{contactForm.get('password')?.errors?.['minlength']?.requiredLength}} characters.
+          class="alert alert-danger">Password must be longer than
+          {{contactForm.get('password')?.errors?.['minlength']?.requiredLength}} characters.
         </div>
         <button class="click-button" (click)="onSubmit()">Sign Up</button>
-    </div>
-</form>
-</section>
+      </div>
+    </form>
+  </section>
 </div>
-
