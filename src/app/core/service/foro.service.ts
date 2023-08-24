@@ -11,4 +11,6 @@ export class ForoService {
   public getTask(url:string){
     return this.http.get(url)
   }
+
+
 }
