@@ -39,7 +39,7 @@
         <label for="email">Email</label><br>
         <input type="email" id="email" formControlName="email" required><br>
         <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required']"
-          class="alert-danger">this field is required.</div><br>
+          class="alert alert-danger">this field is required.</div><br>
 
         <label for="password">Password</label><br>
         <input type="password" id="password" formControlName="password" required><br>
@@ -52,7 +52,7 @@
         <div class="buttons">
           <button class="click-button" (click)="onSubmit()">Sign Up</button>
 
-          <span class="button-back" routerLink="/register">Ya tengo una cuenta</span>
+          <span class="button-back" routerLink="/">Ya tengo una cuenta</span>
         </div>
       </div>
     </form>
