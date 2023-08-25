@@ -4,47 +4,47 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin: 0;
-  padding: 0; */
   width: 100%;
   height: 100%;
   position: fixed;
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  /* background-attachment: fixed;*/
+  /* Fixed altura del fondo y SVG */
   filter: blur(0.2px) hue-rotate(-10deg);
   z-index: -2;
 }
 
 .background-svg {
+  /* Cambiar medidas  */
   position: absolute;
+  pointer-events: none;
   top: 0;
   left: 0;
   width: 800%;
   height: 200%;
   z-index: -1;
-  pointer-events: none;
 }
 
 section {
-  display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: space-between;
-  height: 70%;
-  width: 30%;
+  flex: 1 1 1;
+  flex-basis: 30%;
+  margin-top: 5%;
+  height: 100%;
+  color: #fff;
 }
 
 .title {
-  /* flex-shrink: 0; */
-  /* font-size: xx-large; */
   font-family: Inter;
-  color: aliceblue;
   width: auto;
   text-align: center;
   font-weight: 800;
-  margin-top: -10%;
-  /* margin: -7% 0% 20% 0%; */
+  margin-bottom: 15vh;
+  font-size: 2rem;
 }
 
 form {
@@ -52,10 +52,10 @@ form {
   flex-flow: column wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 25px;
-  padding: 20px;
-  width: 80%;
-  height: 90%;
+  margin: auto;
+  padding: 10px;
+  width: 70%;
+  /* height: 90%; */
 }
 
 .container {
@@ -63,20 +63,21 @@ form {
   flex-flow: column wrap;
   align-items: flex-start;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 form h2 {
   font-family: Inter;
-  color: white;
-  font-size: large;
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin-bottom: 1.2rem;
 }
 
 label {
-  color: #FFF;
+  padding: 0px;
+  margin-bottom: -10px;
   font-family: Inter;
-  font-size: large;
+  font-size: 0.9rem;
 }
 
 .container input {
@@ -84,24 +85,45 @@ label {
   border-top: none;
   border-left: none;
   border-right: none;
-  width: 100%;
+  outline: none;
   color: #FFF;
   border-bottom: solid 2px var(--color-text, #333333);
-  /* outline: none; */
-  /* background-color: rgb(229, 255, 0); */
+  width: 100%;
+  /* background-color: rgba(2, 48, 36, 0.2); */
+}
+
+.button-back {
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.5s;
+  color: #9c9c9c;
+}
+
+.button-back:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.buttons {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
 }
 
 button {
   align-items: center;
   font-family: Inter;
-  font-size: large;
   border: none;
   background-color: #191818;
   color: #FFF;
+  font-size: 1rem;
   border-radius: 10px;
   width: 100%;
-  padding: 10px 0px 10px 0px;
-  margin-top: 20%;
+  padding: 5px 0px 5px 0px;
 }
 
 button:hover {
@@ -113,232 +135,72 @@ button:hover {
   position: relative;
   color: #fff;
   background-color: rgba(201, 18, 18, 0.719);
-  font-size: 12px;
-  padding: 5px 10px;
-  left: -15px;
+  font-size: 0.9rem;
+  padding: 5px;
   top: -60px;
   border-radius: 4px;
-  margin-bottom: -40px;
+  margin-bottom: -55px;
 }
 
 .alert-danger::before {
   content: "\26A0";
   position: absolute;
   left: -15px;
-  font-size: 16px;
+  font-size: 0.9rem;
 }
 
 /* Media Queries */
 @media (max-width: 1600px) {
-
-  /* .login-container {
+  /*
+  .login-container {
     filter: none;
   } */
 
   section {
-    width: 50%;
+    margin-top: 5%;
+    flex-basis: 30%;
   }
 
-  button {
-    margin-top: 60px;
+  form {
+    width: 100%;
   }
 }
 
 @media (max-width: 1200px) {
   section {
-    width: 60%;
+    margin-top: 5%;
+    flex-basis: 50%;
   }
 }
 
 @media (max-width: 768px) {
   section {
-    width: 80%;
+    flex-basis: 60%;
   }
 }
 
 @media (max-width: 480px) {
   section {
-    width: 90%;
-  }
-
-  .title {
-    margin-top: -20%;
+    flex-basis: 70%;
   }
 
   form {
     gap: 0px;
     padding: 0px;
-    width: 85%;
-    height: 80%;
   }
 
   form h2 {
     margin-bottom: 50px;
   }
 
-  button {
-    margin-top: 30px;
+  .buttons {
+    margin-top: 0px;
     width: 90%;
   }
 }
 
 @media (max-width: 320px) {
   section {
-    width: 100%;
+    flex-basis: 90%;
   }
 }
-
-
-/*
-.login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background-image: url("../img/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: blur(0.2px) hue-rotate(-10deg);
-  z-index: -2;
-}
-
-.background-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 800%;
-  height: 200%;
-  z-index: -1;
-  pointer-events: none;
-} */
-
-/* form {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  gap: 10vh;
-  width: auto;
-  margin: 0;
-}
-
-form h1 {
-  flex-shrink: 0;
-  color: #FFF;
-  font-family: Inter;
-  font-size: xx-large;
-  font-weight: 900;
-  margin-bottom: 20%;
-}
-
-.containerAlin input {
-  background: transparent;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: solid 2px var(--color-text, #333333);
-  color: #FFF;
-  outline: none;
-}
-
-label {
-  color: #FFF;
-  font-family: Inter;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 100;
-  line-height: normal;
-  margin-bottom: 0px;
-}
-
-.containerAlin {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 100%;
-  height: auto;
-}
-
-form h2 {
-  flex-shrink: 0;
-  color: #FFF;
-  font-family: Inter;
-  font-size: medium;
-  font-style: normal;
-  font-weight: 100;
-  line-height: normal;
-  margin-bottom: 8%;
-}
-
-
-button {
-  border-radius: 10px;
-  flex-shrink: 0;
-  background-color: #191818;
-  color: #FFF;
-  font-family: Inter;
-  font-size: 14px;
-  border: none;
-  align-items: center;
-  margin: auto;
-  width: 100%;
-  padding: 20px 150px 20px 150px;
-  margin-top: 25%;
-}
-
-button:hover {
-  background-color: #333333;
-}
-
-.click-button {
-  font-size: 16px;
-  background-color: #191818;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.8s ease;
-}
-
-.click-button:active {
-  background-color: #806cf1;
-}
-
-.containerAlin input {
-  background: transparent;
-} */
-
-
-/* @media (max-width: 480px) {
-  .login {
-    filter: none;
-    Eliminar el filtro de desenfoque
-  }
-
-  form {
-    width: 80%;
-    Reducir el ancho del formulario
-  }
-
-  label {
-    font-size: 12px;
-    Reducir el tamaño de fuente de las etiquetas
-  }
-
-  form h1 {
-    font-size: 18px;
-    Reducir el tamaño de fuente del título
-  }
-
-  form h2 {
-    font-size: 12px;
-    Reducir el tamaño de fuente del subtítulo
-  }
-
-  button {
-    width: 100%;
-    Ajustar el ancho del botón al 100%
-  }
-} */
