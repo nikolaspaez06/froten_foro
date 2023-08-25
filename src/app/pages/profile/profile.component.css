@@ -50,7 +50,7 @@ body {
 }
 
 .Edit {
-  width: 180px;
+  width: 150px;
   height: 40px;
   border-radius: 5px;
   border: 2px;
@@ -86,7 +86,7 @@ body {
 
 .insert-img,
 .new-post {
-  width: 180px;
+  width: 150px;
   border-radius: 5px;
   border: 2px;
   border-color: white;
@@ -113,7 +113,7 @@ body {
 .container-img {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap; /* Para que las imágenes se envuelvan en pantallas pequeñas */
+  flex-wrap: wrap;
   margin-left: 500px;
 }
 
@@ -126,7 +126,7 @@ body {
 @media (max-width: 768px) {
   .profile {
     padding: 10px;
-    margin-left: -200px;
+    margin-left: -250px;
     margin-top: -60px;
   }
 
@@ -145,12 +145,12 @@ body {
   }
 
 .til{
-  margin-left: 250px;
+  margin-left: 300px;
 
 
 }
 .Edit{
-  margin-left: 80px;
+  margin-left: 130px;
   margin-top: 250px;
 }
   .container-edit {
@@ -161,7 +161,7 @@ body {
   }
 .inst{
 
-  margin-left: 130px;
+  margin-left: 200px;
   margin-top: 50px;
 }
 .new{
@@ -169,14 +169,14 @@ body {
   margin-top: 50px;
 }
   .imagen {
-    height: 250px ;
+    height: 200px ;
     margin-top: 10px;
-    margin-left: 500px;
+    margin-left: 570px;
   }
   #cajaTexto {
-    width: 250px;
+    width: 200px;
     height: 30px;
-    margin-left: 500px;
+    margin-left: 570px;
     font-size: 12px;
     margin-top: -100px;
 
@@ -187,20 +187,146 @@ body {
   margin-left: 1px;
 }
   .linea-horizontal {
-    width: 50%;
-    margin-left: 300px;
+    width: 60%;
+    margin-left: 250px;
     margin-right: auto;
     margin-top: 6px;
   }
 .container-img{
-  margin-left: 330px;
+  margin-left: 300px;
   margin-top: -10px;
   text-align: start;
 }
   .npost {
-    max-width: 70%;
+    max-width: 80%;
 
     margin: 5px;
   }
 }
+
+/* Para pantallas entre 415px y 1097px de ancho */
+@media (min-width: 780px) and (max-width: 1097px) {
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-left: 0; /* Eliminamos el margen izquierdo */
+    margin-top: 50px;
+  }
+
+
+
+  .container-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    margin-left: 30px; /* Eliminamos el margen izquierdo */
+    margin-top: -150px;
+  }
+
+  .tiltle-2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    margin-left: 400px;
+    /* Reducimos el margen superior */
+
+  }
+
+  .imagen {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-top: -50px; /* Reducimos el margen superior */
+    margin-left: 150px;
+  }
+ .til{
+  margin-top: 200px;
+ }
+  .container-edit {
+    margin: 20px 0;
+    margin-left: 600px; /* Eliminamos el margen izquierdo */
+    margin-top: -200px;
+  }
+
+  .container-text {
+    margin: 20px 0;
+    margin-left: 400px; /* Eliminamos el margen izquierdo */
+    margin-top: -50px; /* Reducimos el margen superior */
+  }
+
+  #cajaTexto {
+    width: 100%; /* Ancho máximo */
+    max-width: 523px;
+    height: 44px;
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid #FFFFFF;
+    background: #191818;
+    color: white;
+    margin-top: 50px;
+
+  }
+
+  .container-but {
+    display: flex;
+    flex-direction: column; /* Alineamos verticalmente */
+    margin-top: -10px;
+  }
+
+  .insert-img,
+  .new-post {
+    width: 100%; /* Ancho máximo */
+    max-width: 180px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 2px;
+    border-color: white;
+    background: linear-gradient(0deg, #1C1C1C, #1C1C1C),
+      linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center; /* Centramos el texto */
+    margin-left: 400px;
+  }
+.new{
+  margin-left: 550px;
+  margin-top: -65px;
+}
+  .linea-horizontal {
+    width: 100%; /* Ancho máximo */
+    max-width: 75%;
+    height: 2px;
+    background-color: #333;
+    margin: 20px 0;
+    margin-top:30px;
+    margin-left: 150px;
+  }
+
+  .container-img {
+    display: flex;
+    flex-direction: column; /* Alineamos verticalmente */
+    align-items: center; /* Centramos horizontalmente */
+    margin: 20px 0;
+    margin-left: 170px;
+    margin-top: 10px;
+  }
+
+  .npost {
+    width: 70%; /* Ancho máximo */
+    max-width: 237px;
+    height: auto;
+    margin: 10px ;
+  }
+
+  .new-post {
+    margin-left: 50px; /* Eliminamos el margen izquierdo */
+  }
+}
+
 
