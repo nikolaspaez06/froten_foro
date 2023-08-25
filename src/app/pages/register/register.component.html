@@ -27,6 +27,7 @@
     <form (ngSubmit)="signUp()" [formGroup]="contactForm">
       <div class="container">
         <h2 class="sub-re">Create your <br>account</h2>
+        <div *ngIf="errorResponseMessage" class="alert alert-not-found">{{ errorResponseMessage }}</div>
         <br>
         <label for="userName">Your Name</label><br>
         <input type="text" id="userName" formControlName="userName" required><br>
@@ -51,9 +52,7 @@
         </div>
         <div class="buttons">
           <button class="click-button" (click)="onSubmit()">Sign Up</button>
-
           <span class="button-back" routerLink="/">I have an account</span>
-
         </div>
       </div>
     </form>

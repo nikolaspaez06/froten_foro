@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/core/service/auth.service';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -23,6 +24,8 @@ export class LoginComponent {
     this.contactForm = this.initFrom();
   }
 
+  errorResponseMessage: string | null = null;
+
   signIn() {
     this.authService.signIn(this.contactForm.value)
       .subscribe(res => {
@@ -30,8 +33,13 @@ export class LoginComponent {
         localStorage.setItem('token', res.token)
         this.router.navigate(['/profile'])
       },
-        err => console.log(err)
-      )
+        err => {
+          console.log(err);
+          if (err instanceof HttpErrorResponse) {
+            this.errorResponseMessage = err.error.message;
+          }
+        }
+      );
   }
 
   onSubmit(): void {
