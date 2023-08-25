@@ -15,10 +15,3 @@ export interface Home extends User {
   _id: string;
 }
 
-export interface profile extends User {
-  _id: string;
-  user: string;
-  date_create: Date;
-  description: string;
-  image: string;
-}
