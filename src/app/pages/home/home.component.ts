@@ -1,6 +1,6 @@
 import { outputAst } from '@angular/compiler';
 import { Component } from '@angular/core';
-import { ForoService } from 'src/app/core/service/foro.service';
+import { ForoService } from 'src/app/core/service/foro/foro.service';
 import { Home } from 'src/app/models/item'
 
 
