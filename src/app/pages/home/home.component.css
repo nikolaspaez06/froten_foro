@@ -7,10 +7,6 @@
     flex-direction: column;
   }
 
-  .aside {
-    display: none;
-  }
-
 
   .publication {
     display: flex;
@@ -145,7 +141,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-
     border: 1px solid white;
   }
 
@@ -184,16 +179,19 @@
   }
 }
 
+/*vista pc*/
 @media (min-width: 1098px) {
   .home-content {
     display: flex;
     background: #121212;
     width: 100%;
-    height: 100vh;
+    min-height: 110vh;
   }
 
   .content-home {
-    width: 1022.881px;
+    /* Ajusta el margen izquierdo para mover el contenido hacia la derecha */
+    margin-left: 220px;
+    /* Puedes ajustar este valor según tus necesidades */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -201,7 +199,8 @@
   }
 
   #publishForm {
-    margin-top: 87px;
+    width: 100%;
+    margin-top: 60px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -210,76 +209,155 @@
   .publication {
     width: 632px;
     height: 145px;
-    flex-shrink: 0;
     border-radius: 10px;
     background: #1E1E1E;
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    /* Agrega espacio interno para contenido */
+    box-sizing: border-box;
+    /* Incluye el padding en el ancho y alto */
+  }
+
+  .row-img-textarea {
+    display: flex;
     flex-direction: column;
   }
 
-  .row {
-    display: flex;
-    flex-direction: row;
+  .publication-image {
+    width: 37px;
+    height: 33px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    /* Ajusta el margen superior según sea necesario */
   }
 
-  textarea {
-    margin-top: 20px;
+  .textarea-container {
+    flex: 1;
+    width: 100%;
+    /* Aprovecha todo el ancho disponible */
+    margin-top: 10px;
+    /* Agrega espacio entre la imagen y el textarea */
+  }
+
+  .textarea-container textarea {
     width: 524px;
     height: 44px;
-    flex-shrink: 0;
     border-radius: 30px;
     border: 1px solid #FFF;
     background: #191818;
-    line-height: 44px;
-    vertical-align: middle;
-    padding-left: 10px;
+    padding: 10px;
     resize: none;
+    font-size: 20px;
+    overflow: hidden;
   }
 
-
-  #publishForm button {
-    color: #FFF;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    background-color: #1E1E1E;
-    border: none;
-    padding-inline: 80px;
+  .publication .row {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 10px;
+    /* Ajusta el margen superior según sea necesario */
+    margin-left: 140px;
   }
 
-  button .image ::before {
-    width: 200px;
-    height: 32px;
-    flex-shrink: 0;
-  }
-
-  button .image .icon-image {
+  .insert-image-button,
+  .publish-button {
     width: 40px;
     height: 35px;
-    flex-shrink: 0;
-    margin-right: 20px;
-    fill: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #1E1E1E;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: calc(50% - 5px);
   }
 
-  button .submit {
-    width: 86px;
-    height: 32px;
-    flex-shrink: 0;
+  .head-publication {
+    margin-top: 80px;
   }
 
-  .modify-publication button {
-    width: 28.589px;
-    height: 6.285px;
-    flex-shrink: 0;
-    background-color: #4A4A4A;
-    position: absolute;
-    left: 10px;
+  .modify-publication img {
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
+    border-radius: 60px;
+  }
+
+  .modify-publication #user-name {
+    font-size: 20px;
+    margin-left: -500px;
+    margin-top: 20px;
+  }
+
+  .modify-publication .interaction-toolbar button {
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .modify-publication .interaction-toolbar svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .modify-publication .head-publication {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+  }
+
+  .modify-publication .head-publication button svg {
+    margin-left: auto;
+  }
+
+  .modify-publication .img-publication {
+    width: 85%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 30px;
+    /* Agrega un margen superior para separar la imagen del botón */
+  }
+
+  .user-comment {
+    padding: 15px;
+    margin-top: 25px;
+    margin-left: 15px;
+  }
+
+  .modify-publication .user-comment #user-name {
+    font-size: 16px;
+  }
+
+  .modify-publication .user-comment #user-publication {
+    font-size: 16px;
+    margin-left: -40px;
+  }
+
+  .modify-publication #Add-comment {
+    width: 85%;
+    border-radius: 30px;
+    border: 1px solid #FFF;
+    background: #191818;
+    padding-left: 30px;
+    resize: none;
+    font-size: 10px;
+    margin-top: 10px;
+    /* Añade espacio entre el textarea y los comentarios */
+  }
+
+  button {
+    color: #FFF;
+    background-color: #121212;
+    border: none;
   }
 }
