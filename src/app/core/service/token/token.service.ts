@@ -13,7 +13,7 @@ export class TokenService implements HttpInterceptor {
   intercept(req:any, next:any) {
     const tokennzeReq = req.clone({
       setHeaders: {
-        Authorizatiion: `Bearer ${this.authService.gettoken()}`
+        Authorization: `Bearer ${this.authService.gettoken()}`
       }
     })
     return next.handle(tokennzeReq)
