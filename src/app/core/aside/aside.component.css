@@ -1,5 +1,6 @@
+
 *{
-  font-family: "";
+  font-family:Arial,sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -22,13 +23,22 @@
 .body{
   height: 100vh;
   background: var(--body-color);
-}
+  font-family: 'Inter',normal;
 
+}
+.text .pof{
+  color:white;
+  margin: 30px;;
+}
+.text .po{
+  color:white;
+  margin: 30px;;
+}
 /* ====reciclar==== */
 .sidebar .text{
-  height: 10px;
+  height: 25px;
   font-size: 20px;
-  color: var(--text-color)
+  color: white !important;
 }
 
 .sidebar .image{
@@ -145,9 +155,36 @@ a{
 
 }
 
+.po{
+  display: none;
+
+}
+
 @media (max-width: 700px){
-  .text{
+  .text.menu{
     display: none;
+  }
+
+  .home{
+    display: none;
+  }
+
+  .profile{
+    display: none;
+  }
+
+  .close{
+    display: none;
+  }
+
+
+  .pof{
+    display: none;
+  }
+
+  .po{
+    color: #ffffff;
+    display: block;
   }
 
   .sidebar .image{
