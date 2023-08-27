@@ -10,31 +10,44 @@ import { AuthService } from 'src/app/core/service/auth.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-  user: User[] = [];
+  user: User | null = null;
   users: User[] = [];
   respuesta: any;
 
   constructor(private router: Router,
     private route: ActivatedRoute,
-    private ProfileService: ProfileService) { }
+    private ProfileService: ProfileService,
+    private AuthService: AuthService) { }
 
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(paramMap => {
-      // const { params } = paramMap
-      console.log(paramMap)
-      // this.cargarUser(params.variable)
-    })
+    const loggedInUserId = this.AuthService.getLoggedInUserId();
 
-    // this.getUsers()
+    if (loggedInUserId) {
+      this.route.paramMap.subscribe(paramMap => {
+
+        const id = paramMap.get('id');
+        console.log('Id Login: ', id)
+        if (id === loggedInUserId) {
+          this.ProfileService.getUser(id).subscribe(data => {
+            this.user = data;
+            console.log(data)
+
+          });
+        } else {
+          console.error('Error ids diferentes no coinciden')
+          // this.router.navigate(['/error']);
+        }
+      });
+    }
   }
 
-  cargarUser(_id: string) {
-    this.ProfileService.getUser('http://localhost:3000/poofo/${id}')
-      .subscribe(respuesta => {
-        this.respuesta = respuesta;
-      })
-  }
+  // cargarUser(id: string) {
+  //   this.ProfileService.getUser('http://localhost:3000/poofo/${id}')
+  //     .subscribe(respuesta => {
+  //       this.respuesta = respuesta;
+  //     })
+  // }
 
   // getUser(_id: string) {
   //   this.ProfileService.getUser(_id).subscribe(data => {

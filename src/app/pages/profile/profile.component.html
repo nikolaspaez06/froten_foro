@@ -3,17 +3,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <body>
-  <!-- <div class="profile">
+  <div class="profile">
     <div class="vertical-line"></div>
 
     <div class="container-profile">
-      <form>
+      <form *ngIf="user">
         <div class="til">
-          <h2 class="tiltle-2">spider man</h2>
+          <h2 class="tiltle-2">{{ user.userName }}</h2>
         </div>
-        <img class="imagen"
-          src="https://www.techpowerup.com/review/marvel-s-spider-man-remastered-dlaa-vs-dlss-vs-fsr-2-0-comparison/images/small.png"
-          alt="Mi Foto de Perfil">
+        <img class="imagen" [src]="user.userImg" alt="Mi Foto de Perfil">
         <div class="container-edit">
           <button class="Edit" type="submit">Editar perfil</button>
         </div>
@@ -48,18 +46,11 @@
           alt="post">
       </form>
     </div>
-  </div> -->
+  </div>
 
 
 </body>
-<!-- <div style=" background-color: aqua; padding: 10px; font-size: 2rem;">
-  <tbody *ngFor="let user of users">
-    <td>{{user._id}}</td>
-    <td>{{user.userName}}</td>
-    <td>{{user.email}}</td>
-    <td>{{user.userImg}}</td>
-  </tbody>
 
-</div> -->
 
-DATA: {{respuesta | json}}
+
+<!-- DATA: {{respuesta | json}} -->

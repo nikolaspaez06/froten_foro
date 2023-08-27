@@ -8,17 +8,19 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProfileService {
-  private URL = 'http://localhost:3000/poofo'
+  private URL = 'https://pooforoapi.onrender.com/poofo/'
 
   constructor(private http: HttpClient,
     private router: Router) { }
 
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.URL);
-
   }
 
-  getUser(_id: string): Observable<User[]> {
-    return this.http.get<User[]>(`${this.URL}/${_id}`);
+  getUser(id: string): Observable<User> {
+    const url = `${this.URL}/${id}`;
+    console.log('Requesting user data from:', url);
+    return this.http.get<User>(url);
   }
+
 }

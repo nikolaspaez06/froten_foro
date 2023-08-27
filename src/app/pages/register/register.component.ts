@@ -32,7 +32,13 @@ export class RegisterComponent {
       .subscribe(res => {
         console.log(res)
         localStorage.setItem('token', res.token)
-        this.router.navigate(['/profile'])
+
+        const userId = this.authService.getLoggedInUserId();
+        if (userId) {
+          this.router.navigate(['/profile', userId]);
+        } else {
+          console.log('No se encontro id')
+        }
       },
         err => {
           console.log(err);

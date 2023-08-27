@@ -30,8 +30,14 @@ export class LoginComponent {
     this.authService.signIn(this.contactForm.value)
       .subscribe(res => {
         console.log(res)
-        localStorage.setItem('token', res.token)
-        this.router.navigate(['/profile/:variable'])
+        localStorage.setItem('token', res.token);
+
+        const userId = this.authService.getLoggedInUserId();
+        if (userId) {
+          this.router.navigate(['/profile', userId]);
+        } else {
+          console.log('No se encontro id')
+        }
       },
         err => {
           console.log(err);
