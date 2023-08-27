@@ -1,4 +1,5 @@
 <div class="login-container">
+  <!-- Efecto de fondo -->
   <div class="background-svg">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
       <g filter="url(#filter0_i_129_315)">
@@ -24,9 +25,13 @@
     <div class="title">
       <h1 class="title">POOFO</h1>
     </div>
+
+    <!-- form para pedir y enviar la informacion del usuario mediante el metodo signIn -->
     <form (ngSubmit)="signIn()" [formGroup]="contactForm">
       <div class="container">
         <h2 class="sub-re">Log into<br>your account</h2>
+
+        <!-- Validaciones de errores, muestra en una pequeña alerta el mensaje el error correspondiente -->
         <div *ngIf="errorResponseMessage" class="alert alert-not-found">{{ errorResponseMessage }}</div>
 
         <label class="loginEmail" for="email">Email</label><br>
@@ -44,27 +49,11 @@
           {{contactForm.get('password')?.errors?.['minlength']?.requiredLength}} characters.</div>
       </div>
 
+      <!-- Bottones para enviar la informacion y redirigir segun las necesidades del cliente -->
       <div class="buttons">
         <button class="click-button" (click)="onSubmit()">Log in</button>
         <button routerLink="/register" class="click-button" type="button">Register</button>
       </div>
     </form>
   </section>
-  <!-- <div style="display: flex; flex-flow: column wrap;">
-    <div class="title">
-      <h1 class="title">POOFO</h1>
-    </div>
-    <div class="title">
-      <h1 class="title">POOFO</h1>
-    </div>
-    <div class="title">
-      <h1 class="title">POOFO</h1>
-    </div>
-    <div class="title">
-      <h1 class="title">POOFO</h1>
-    </div>
-    <div class="title">
-      <h1 class="title">POOFO</h1>
-    </div>
-  </div> -->
 </div>

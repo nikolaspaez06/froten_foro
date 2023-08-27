@@ -24,9 +24,12 @@
     <div class="title">
       <h1 class="title">POOFO</h1>
     </div>
+    <!-- form para pedir y enviar la informacion del nuevo usuario mediante el metodo signUp -->
     <form (ngSubmit)="signUp()" [formGroup]="contactForm">
       <div class="container">
         <h2 class="sub-re">Create your <br>account</h2>
+
+        <!-- Validaciones de errores, muestra en una pequeña alerta el mensaje el error correspondiente -->
         <div *ngIf="errorResponseMessage" class="alert alert-not-found">{{ errorResponseMessage }}</div>
         <br>
         <label for="userName">Your Name</label><br>
@@ -50,6 +53,8 @@
           class="alert alert-danger">Password must be longer than
           {{contactForm.get('password')?.errors?.['minlength']?.requiredLength}} characters.
         </div>
+
+        <!-- Bottones para enviar la informacion y redirigir segun las necesidades del cliente -->
         <div class="buttons">
           <button class="click-button" (click)="onSubmit()">Sign Up</button>
           <span class="button-back" routerLink="/">I have an account</span>
