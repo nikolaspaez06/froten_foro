@@ -115,6 +115,38 @@ button:hover {
   background-color: rgb(68, 65, 65);
 }
 
+.alert-not-found {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  background-color: rgba(201, 18, 18, 0.719);
+  font-size: 0.9rem;
+  padding: 5px;
+  right: -500;
+  top: -60px;
+  border-radius: 4px;
+  margin-left: 10rem;
+  margin-bottom: -2rem;
+  transition: width 0.10s linear 0.2s;
+
+}
+
+.alert-not-found:hover {
+  background-color: rgba(201, 18, 18, 0.719);
+  transform: scale(1.1);
+  filter: blur(0.1px) hue-rotate(100deg);
+
+}
+
+.alert-not-found::before {
+  content: "\26A0";
+  position: absolute;
+  left: -25px;
+  top: -5px;
+  font-size: 1.5rem;
+
+}
+
 .alert-danger {
   display: inline-block;
   position: relative;
@@ -124,7 +156,7 @@ button:hover {
   padding: 5px;
   top: -60px;
   border-radius: 4px;
-  margin-bottom: -55px;
+  margin-bottom: -2rem;
 }
 
 .alert-danger::before {
