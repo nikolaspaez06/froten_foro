@@ -1,14 +1,15 @@
-<!-- <app-aside></app-aside> -->
+<app-aside></app-aside>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <body>
   <div class="profile">
     <div class="vertical-line"></div>
-
     <div class="container-profile">
+      <!-- Mediante '*ngIf' se obtiene la data del user -->
       <form *ngIf="user">
         <div class="til">
+          <!--Se muestra la data del usuario que corresponda -->
           <h2 class="tiltle-2">{{ user.userName }}</h2>
         </div>
         <img class="imagen" [src]="user.userImg" alt="Mi Foto de Perfil">
@@ -18,7 +19,7 @@
 
         <div class="container-text">
           <label for="cajaTexto" placeholder="Ingresa tu texto aquí"></label>
-          <input type="text" id="cajaTexto" name="nombre">
+          <input type="text" id="cajaTexto" name="nombre" placeholder="Escribe lo que quieras {{user.userName}}">
         </div>
         <div class="container-but">
           <div class="inst">
@@ -27,14 +28,11 @@
           <div class="new">
             <button class="new-post" type="submit">New post</button>
           </div>
-
         </div>
-
       </form>
-
     </div>
 
-    <div class="linea-horizontal"></div>
+    <div class="linea-horizontaal"></div>
 
     <div class="container-img">
       <form>
@@ -50,7 +48,3 @@
 
 
 </body>
-
-
-
-<!-- DATA: {{respuesta | json}} -->

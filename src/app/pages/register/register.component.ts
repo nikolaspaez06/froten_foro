@@ -13,13 +13,13 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 
 export class RegisterComponent {
+  contactForm!: FormGroup;
 
   constructor(private authService: AuthService,
     private readonly fb: FormBuilder,
     private router: Router) { }
 
-  contactForm!: FormGroup;
-
+  //  Inicializa el grupo de formulario al cargar el componente y el metodo para regisrarse.
   ngOnInit(): void {
     this.contactForm = this.initFrom();
     this.signUp()
@@ -27,13 +27,16 @@ export class RegisterComponent {
   // Var para guardar y manejar el error
   errorResponseMessage: string | null = null;
 
+  // Metodo para manejar el registro del usuario
   signUp() {
     this.authService.signUp(this.contactForm.value)
       .subscribe(res => {
         console.log(res)
         localStorage.setItem('token', res.token)
 
+        // Obtiene el ID del usuario logueado.
         const userId = this.authService.getLoggedInUserId();
+        // Redirige al perfil del usuario si los IDs coinciden.
         if (userId) {
           this.router.navigate(['/profile', userId]);
         } else {
@@ -49,11 +52,11 @@ export class RegisterComponent {
       );
   }
 
-
   onSubmit(): void {
     console.log('form ->', this.contactForm.value);
   }
 
+  //  Inicializa el formulario con reglas de validación.
   initFrom(): FormGroup {
     return this.fb.group({
       userName: ['', [Validators.required, Validators.minLength(3)]],
