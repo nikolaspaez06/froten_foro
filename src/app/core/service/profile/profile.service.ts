@@ -10,10 +10,12 @@ import { Observable } from 'rxjs';
 export class ProfileService {
   private URL = 'http://localhost:3000/poofo'
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient,
+    private router: Router) { }
 
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.URL);
+
   }
 
   getUser(_id: string): Observable<User[]> {

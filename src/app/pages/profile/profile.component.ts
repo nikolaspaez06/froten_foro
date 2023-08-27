@@ -10,41 +10,70 @@ import { AuthService } from 'src/app/core/service/auth.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-  users: User[] = [];
   user: User[] = [];
+  users: User[] = [];
+  respuesta: any;
 
-  constructor(private router: Router, private activerouter: ActivatedRoute, private ProfileService: ProfileService) { }
+  constructor(private router: Router,
+    private route: ActivatedRoute,
+    private ProfileService: ProfileService) { }
+
 
   ngOnInit(): void {
-    const _id = this.activerouter.snapshot.paramMap.get('id');
-    const token = this.gettoken();
-    console.log(token);
-
-    if (_id) {
-      this.ProfileService.getUser(_id).subscribe(data => {
-        this.user = data;
-        console.log(data);
-      });
-    }
-  }
-
-  gettoken() {
-    return localStorage.getItem('token')
-  }
-
-  getUsers() {
-    this.ProfileService.getUsers().subscribe(data => {
-      this.users = data;
+    this.route.paramMap.subscribe(paramMap => {
+      // const { params } = paramMap
+      console.log(paramMap)
+      // this.cargarUser(params.variable)
     })
+
+    // this.getUsers()
   }
+
+  cargarUser(_id: string) {
+    this.ProfileService.getUser('http://localhost:3000/poofo/${id}')
+      .subscribe(respuesta => {
+        this.respuesta = respuesta;
+      })
+  }
+
   // getUser(_id: string) {
   //   this.ProfileService.getUser(_id).subscribe(data => {
   //     this.user = data;
+  //     console.log(data)
   //   })
   // }
-  editUser(_id: string) {
-    console.log(_id)
-  }
+
+  // getUsers() {
+  //   this.ProfileService.getUsers().subscribe(data => {
+  //     this.users = data;
+  //     console.log(data)
+  //   })
+  // }
+
+
+
+  // ngOnInit(): void {
+  //   const _id = this.activerouter.snapshot.paramMap.get('id');
+  //   const token = this.gettoken();
+  //   console.log(token);
+  //   console.log(_id);
+
+  //   if (_id) {
+  //     this.ProfileService.getUser(_id).subscribe(data => {
+  //       this.user = data;
+  //       console.log(data);
+  //     });
+  //   }
+  //   console.log(_id);
+  // }
+
+  // gettoken() {
+  //   return localStorage.getItem('token')
+  // }
+
+  // editUser(_id: string) {
+  //   console.log(_id)
+  // }
 
   // title = 'profile';
 
