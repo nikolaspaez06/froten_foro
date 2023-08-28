@@ -1,7 +1,6 @@
-<div class="custom-modal">
+<div class="custom-modal" *ngIf="showModal">
   <div class="modal_body">
     <h3>Contenido del modal</h3>
-    <button (click)="closeModal()">X</button>
+    <button class="button-x" (click)="closeModal()">X</button>
   </div>
 </div>
-

@@ -14,7 +14,7 @@ import { SwitchService } from 'src/app/core/service/modal/switch.service';
 export class HomeComponent {
   constructor(private foroService: ForoService,
     private interactionService: InteractionService,
-    private modalSS:SwitchService ){}
+    private modalSS: SwitchService) { }
 
 
   @Input() publication: any;
@@ -30,7 +30,7 @@ export class HomeComponent {
 
 
   ngOnInit(): void {
-    this.modalSS.$modal.subscribe((valu)=>{this.isModalVisible = valu})
+    this.modalSS.$modal.subscribe((valu) => { this.isModalVisible = valu })
     // Carga los "likes" guardados en el localStorage al inicio
     const storedLikes = localStorage.getItem('likedPublications');
     if (storedLikes) {
@@ -59,7 +59,7 @@ export class HomeComponent {
 
         forkJoin(requests).subscribe((responses: any[]) => {
           const usernames = responses.map(response => response.userName);
-          const userimgs = responses.map(responses => responses.userImg )
+          const userimgs = responses.map(responses => responses.userImg)
 
           this.listpublications = data.map((publication, index) => ({
             ...publication,
@@ -82,11 +82,10 @@ export class HomeComponent {
 
 
 
-  openModal(){
-
-    this.isModalVisible = true
+  openModal() {
+    console.log('Modal emitido');
+    this.modalSS.$modal.emit(true);
   }
-
 
   postText: string = '';
   public publishPost() {
