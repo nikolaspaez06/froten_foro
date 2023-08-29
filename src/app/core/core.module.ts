@@ -4,7 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { AsideComponent } from './aside/aside.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoaderComponent } from './loader/loader.component';
-
+import { RouterModule, Routes } from '@angular/router';
 
 
 @NgModule({
@@ -15,9 +15,10 @@ import { LoaderComponent } from './loader/loader.component';
   ],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
-  exports:[
+  exports: [
     AsideComponent,
     LoaderComponent
   ]

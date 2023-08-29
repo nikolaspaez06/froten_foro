@@ -1,12 +1,11 @@
-
-*{
-  font-family:Arial,sans-serif;
+* {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --body-color: #020202;
   --sidebar-color: #444343;
   --primary-color: #695cfe;
@@ -20,48 +19,53 @@
   --tran-05: all 0.5s ease;
 }
 
-.body{
+.body {
   height: 100vh;
   background: var(--body-color);
-  font-family: 'Inter',normal;
+  font-family: 'Inter', normal;
 
 }
-.text .pof{
-  color:white;
-  margin: 30px;;
+
+.text .pof {
+  color: white;
+  margin: 30px;
+  ;
 }
-.text .po{
-  color:white;
-  margin: 30px;;
+
+.text .po {
+  color: white;
+  margin: 30px;
+  ;
 }
+
 /* ====reciclar==== */
-.sidebar .text{
+.sidebar .text {
   height: 25px;
   font-size: 20px;
   color: white !important;
 }
 
-.sidebar .image{
+.sidebar .image {
   position: relative;
   left: 45px;
-  min-width:130px;
+  min-width: 130px;
   margin-top: 40px;
 }
 
-.sidebar .menu{
+.sidebar .menu {
   position: relative;
   top: 160px;
 
 }
 
-.sidebar .accesibility{
+.sidebar .accesibility {
   position: relative;
   top: 200px;
 }
 
 
 /* ====sidebar==== */
-.sidebar{
+.sidebar {
   position: fixed;
   top: 0;
   left: 0;
@@ -72,7 +76,7 @@
   z-index: 12;
 }
 
-.sidebar li{
+.sidebar li {
   height: 50px;
   margin-top: 10px;
   list-style: none;
@@ -80,26 +84,26 @@
   align-items: center;
 }
 
-.sidebar li .icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 90px;
-    font-size: 38px;
+.sidebar li .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  font-size: 38px;
 }
 
 .sidebar li .icon,
-.sidebar li .text{
-    color: var(--text-color);
-    transition: var(--tran-02);
+.sidebar li .text {
+  color: var(--text-color);
+  transition: var(--tran-02);
 }
 
-.sidebar header{
+.sidebar header {
   position: relative;
 }
 
 
-.sidebar .image-text img{
+.sidebar .image-text img {
   width: 100px;
   display: flex;
   align-items: center;
@@ -108,20 +112,20 @@
 }
 
 
-header .image-text .header-text{
+header .image-text .header-text {
   display: flex;
   flex-direction: column;
 }
 
-.header-text .name{
+.header-text .name {
   font-weight: 600;
 }
 
-.header-text .profession{
+.header-text .profession {
   margin-top: -2px;
 }
 
-.sidebar header .toggle{
+.sidebar header .toggle {
   position: absolute;
   top: 50%;
   left: -25px;
@@ -137,11 +141,11 @@ header .image-text .header-text{
   font-size: 22px;
 }
 
-a{
-  color: white!important;
+a {
+  color: white !important;
 }
 
-.sidebar li a{
+.sidebar li a {
   height: 100%;
   display: flex;
   align-items: center;
@@ -150,58 +154,57 @@ a{
 }
 
 .sidebar li a:hover .icon,
-.sidebar li a:hover .text{
-    color: var(--sidebar-color)
-
+.sidebar li a:hover .text {
+  color: var(--sidebar-color)
 }
 
-.po{
+.po {
   display: none;
 
 }
 
-@media (max-width: 700px){
-  .text.menu{
+@media (max-width: 700px) {
+  .text.menu {
     display: none;
   }
 
-  .home{
+  .home {
     display: none;
   }
 
-  .profile{
+  .profile {
     display: none;
   }
 
-  .close{
+  .close {
     display: none;
   }
 
 
-  .pof{
+  .pof {
     display: none;
   }
 
-  .po{
+  .po {
     color: #ffffff;
     display: block;
   }
 
-  .sidebar .image{
+  .sidebar .image {
     position: relative;
     left: 45px;
-    min-width:130px;
+    min-width: 130px;
     margin-top: -1000px;
   }
 
-  .sidebar{
+  .sidebar {
     width: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .sidebar .accesibility{
+  .sidebar .accesibility {
     position: relative;
     top: 250px;
   }
@@ -209,4 +212,3 @@ a{
 
 
 }
-

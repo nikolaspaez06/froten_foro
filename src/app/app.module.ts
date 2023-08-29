@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenService } from './core/service/token/token.service';
 import { PagesModule } from './pages/pages.module';
-
+import { RouterModule, Routes } from '@angular/router';
 
 
 @NgModule({
@@ -19,10 +19,11 @@ import { PagesModule } from './pages/pages.module';
     AppRoutingModule,
     PagesModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([])
 
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: TokenService, multi: true}],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenService, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -31,9 +31,9 @@
             <span class="home nav-text">Home</span>
           </a>
         </li>
-        <li class="nav-links">
+        <li class="nav-links" *ngIf="userId">
           <!-- Añadir ruta profile ID del user logeado -->
-          <a href="/home">
+          <a [routerLink]="['/profile', userId]">
             <i class='bx bx-ghost icon'></i>
             <span class="profile nav-text">Profile</span>
           </a>
