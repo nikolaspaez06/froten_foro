@@ -1,6 +1,7 @@
 /* Estilos comunes */
 .home-content {
   display: flex;
+  flex-direction: column;
   background: #121212;
   width: 100%;
   min-height: 110vh;
@@ -22,7 +23,7 @@
 }
 
 .main-content {
-  margin-left: 500px;
+  margin-left: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,6 +34,7 @@
 .post-container {
   max-width: 900px;
   margin-top: 20px;
+  margin: 20px;
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -51,7 +53,7 @@
   /* Tamaño de la imagen */
   height: 40px;
   border-radius: 50%;
-  /* Para que la imagen sea redonda */
+
   margin-right: 10px;
   /* Espacio entre la imagen y el textarea */
   margin-top: 20px;
@@ -77,7 +79,8 @@ textarea {
 }
 
 .button-group {
-  width: 100%;
+  width: 80%;
+  margin-left: 30px;
 }
 
 .insert-button {
@@ -110,9 +113,6 @@ button:hover {
   background-color: #464748;
 }
 
-/* Estilos para el modal */
-
-
 /* Estilos de las publicaciones */
 .post {
   width: 100%;
@@ -120,7 +120,7 @@ button:hover {
   background-color: #1E1E1E;
   border-radius: 10px;
   margin-top: 20px;
-
+  margin: 20px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -218,4 +218,35 @@ button:hover {
 .liked {
   background-color: #E0E1E4;
   color: #151616;
+}
+
+
+@media (max-width: 425px) {
+  .main-content {
+    margin-left: 50px;
+    /* adaptar al margen lateral */
+  }
+
+  .button-group {
+    width: 100%;
+    /* Ocupar todo el ancho disponible */
+    margin-left: 0;
+    justify-content: center;
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-content {
+    margin-left: 200px;
+    /* adaptar al margen lateral */
+  }
+
+  .button-group {
+    width: 100%;
+    /* Ocupar todo el ancho disponible */
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
 }

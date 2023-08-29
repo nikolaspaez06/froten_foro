@@ -12,10 +12,10 @@
           alt="Imagen de usuario">
       </div>
       <div class="post-content">
-        <textarea [(ngModel)]="postText" placeholder="Escribe tu publicación..."></textarea>
+        <textarea [(ngModel)]="postText" placeholder="Write your post..."></textarea>
         <div class="button-group" *ngIf="openModal">
-          <button class="insert-button" (click)="openModal()">Insertar Imagen</button>
-          <button class="publish-button" (click)="publishPost()">Publicar</button>
+          <button class="insert-button" (click)="openModal()">Insert image</button>
+          <button class="publish-button" (click)="publishPost()">Post</button>
           <app-modal></app-modal>
         </div>
       </div>
@@ -37,9 +37,9 @@
       </div>
       <div class="post-actions">
         <button class="like-button" [ngClass]="{ 'liked': likedPublications[publication._id] }"
-          (click)="likePublication(publication)">Me gusta</button>
-        <button class="comment-button">Comentar</button>
-        <button class="share-button">Compartir</button>
+          (click)="likePublication(publication)">Like</button>
+        <button class="comment-button">Comment</button>
+        <button class="share-button">Share</button>
       </div>
     </div>
   </div>
