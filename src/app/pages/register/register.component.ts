@@ -19,7 +19,7 @@ export class RegisterComponent {
     private readonly fb: FormBuilder,
     private router: Router) { }
 
-  //  Inicializa el grupo de formulario al cargar el componente y el metodo para regisrarse.
+  //  Inicializa el grupo de formulario y el metodo para regisrarse al cargar el componente.
   ngOnInit(): void {
     this.contactForm = this.initFrom();
     this.signUp()

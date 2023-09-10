@@ -7,9 +7,15 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./aside.component.css']
 })
 export class AsideComponent {
-  constructor(private authService: AuthService){}
+  userId: string | null = null;
 
-  logout(){
+  constructor(private authService: AuthService) { }
+
+  ngOnInit(): void {
+    this.userId = this.authService.getLoggedInUserId();
+  }
+
+  logout() {
     this.authService.logout()
   }
 }

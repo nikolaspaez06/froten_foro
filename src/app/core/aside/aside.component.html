@@ -1,5 +1,5 @@
-
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,46 +8,51 @@
   <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
   <title>Asidebar</title>
 </head>
+
 <body>
   <nav class="sidebar">
     <header>
       <div class="text">
         <span>
-          <h1 class="pof">POOFO</h1>
+          <a href="/home" style="text-decoration: none;">
+            <h1 class="pof">POOFO</h1>
+          </a>
           <h1 class="po">PO</h1>
         </span>
       </div>
     </header>
 
 
-      <div class="menu">
+    <div class="menu">
+      <ul class="menu-link">
+        <li class="nav-links tall">
+          <a href="/home">
+            <i class='bx bx-church icon'></i>
+            <span class="home nav-text">Home</span>
+          </a>
+        </li>
+        <li class="nav-links" *ngIf="userId">
+          <!-- Añadir ruta profile ID del user logeado -->
+          <a [routerLink]="['/profile', userId]">
+            <i class='bx bx-ghost icon'></i>
+            <span class="profile nav-text">Profile</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="accesibility">
         <ul class="menu-link">
-          <li class="nav-links tall">
-            <a href="/home">
-              <i class='bx bx-church icon'></i>
-              <span class="home nav-text">Home</span>
-            </a>
-          </li>
           <li class="nav-links">
-            <a href="/profile">
-              <i class='bx bx-ghost icon'></i>
-              <span class="profile nav-text">Profile</span>
+            <a>
+              <i class='bx bx-log-out icon'></i>
+              <span (click)="logout()" class="close nav-text">Sign off</span>
             </a>
           </li>
         </ul>
-
-        <div class="accesibility" >
-          <ul class="menu-link">
-            <li class="nav-links">
-              <a>
-                <i class='bx bx-log-out icon'></i>
-                <span (click)="logout()" class="close nav-text">Sign off</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+      </div>
 
     </div>
   </nav>
 </body>
+
 </html>

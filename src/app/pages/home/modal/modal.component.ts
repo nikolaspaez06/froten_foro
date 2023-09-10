@@ -7,15 +7,21 @@ import { SwitchService } from 'src/app/core/service/modal/switch.service';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent {
-  constructor(private modalSS: SwitchService){}
+  showModal: boolean = false;
 
-  ngOnInit():void{
+  constructor(private modalSS: SwitchService) {
+    // Suscribirse al evento $modal para saber cuándo mostrar el modal
+    this.modalSS.$modal.subscribe((value) => {
+      console.log('Valor showModal:', value);
+      this.showModal = value;
+    });
   }
 
 
-  closeModal(){
 
-    this.modalSS.$modal.emit(false)
+  closeModal() {
+    this.showModal = false;
+
   }
 
 }

@@ -12,7 +12,9 @@
           <!--Se muestra la data del usuario que corresponda -->
           <h2 class="tiltle-2">{{ user.userName }}</h2>
         </div>
-        <img class="imagen" [src]="user.userImg" alt="Mi Foto de Perfil">
+        <img class="imagen"
+          [src]="user.userImg || 'https://pm1.aminoapps.com/6588/f337a62675dc1e0f5c32640a9173f3b72b7d57bd_00.jpg'"
+          alt="Mi Foto de Perfil">
         <div class="container-edit">
           <button class="Edit" type="submit">Editar perfil</button>
         </div>
